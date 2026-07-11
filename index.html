@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptCraft AI | Dynamic Prompt Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Cyber/Modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <main class="container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">⚡ PromptCraft <span>AI</span></div>
+            <p class="subtitle">Day 16 of #20Day20AI • Craft professional prompts instantly</p>
+        </header>
+
+        <!-- Main Grid Layout -->
+        <div class="app-grid">
+            
+            <!-- Left Side: Inputs & Toggles -->
+            <section class="control-panel panel">
+                <div class="input-group">
+                    <label for="raw-idea">Your Raw Idea / Task</label>
+                    <textarea id="raw-idea" placeholder="e.g., Write a catchy headline for a coffee shop website..."></textarea>
+                </div>
+
+                <!-- Custom Template Shortcuts -->
+                <div class="quick-tags">
+                    <button class="tag-btn" onclick="applyPreset('copywriting')">📝 Copywriting</button>
+                    <button class="tag-btn" onclick="applyPreset('coding')">💻 Coding Help</button>
+                    <button class="tag-btn" onclick="applyPreset('analysis')">🔍 Deep Analysis</button>
+                </div>
+
+                <div class="modifiers">
+                    <!-- Tone Selection -->
+                    <div class="modifier-group">
+                        <label>Select Tone</label>
+                        <div class="toggle-options" id="tone-group">
+                            <button class="option-btn active" data-value="Professional">Professional</button>
+                            <button class="option-btn" data-value="Creative & Catchy">Creative</button>
+                            <button class="option-btn" data-value="Humorous & Casual">Casual</button>
+                            <button class="option-btn" data-value="Persuasive">Persuasive</button>
+                        </div>
+                    </div>
+
+                    <!-- Target Audience -->
+                    <div class="modifier-group">
+                        <label>Target Audience</label>
+                        <div class="toggle-options" id="audience-group">
+                            <button class="option-btn active" data-value="General Public">General</button>
+                            <button class="option-btn" data-value="Tech-savvy Professionals">Techies</button>
+                            <button class="option-btn" data-value="Students & Beginners">Students</button>
+                            <button class="option-btn" data-value="High-intent Buyers">Buyers</button>
+                        </div>
+                    </div>
+
+                    <!-- Output Length -->
+                    <div class="modifier-group">
+                        <label>Output Length</label>
+                        <div class="toggle-options" id="length-group">
+                            <button class="option-btn active" data-value="Concise and direct">Short</button>
+                            <button class="option-btn" data-value="Detailed with step-by-step breakdown">Detailed</button>
+                            <button class="option-btn" data-value="A comprehensive, multi-paragraph deep-dive">Extensive</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="primary-btn">Generate Engineered Prompt 🚀</button>
+            </section>
+
+            <!-- Right Side: Live Output -->
+            <section class="output-panel panel">
+                <div class="panel-header">
+                    <h3>Engineered Prompt Output</h3>
+                    <button id="copy-btn" class="secondary-btn">
+                        <span id="copy-text">Copy Prompt</span>
+                    </button>
+                </div>
+                
+                <div class="output-wrapper">
+                    <div id="output-display" class="placeholder-text">
+                        Your optimized prompt will appear here in real-time as you tweak the variables...
+                    </div>
+                </div>
+                
+                <div class="pro-tip">
+                    💡 <strong>Pro-Tip:</strong> Paste this directly into ChatGPT, Claude, or Gemini for superior, context-rich results.
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
